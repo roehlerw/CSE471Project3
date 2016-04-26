@@ -1,8 +1,0 @@
-Content\elite-knight.xnb
-Content\Swords_Collide-Sound.xnb
-Content\solaire.xnb
-Content\SpriteFont1.xnb
-Content\danger-zone-short.xnb
-Content\danger-zone.xnb
-Content\skyrim.xnb
-Content\siren.xnb
