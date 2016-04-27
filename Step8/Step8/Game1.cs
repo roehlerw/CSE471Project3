@@ -18,10 +18,13 @@ namespace Step8
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        KeyboardState oldState;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 1000;
+            graphics.PreferredBackBufferWidth = 600;
             Content.RootDirectory = "Content";
         }
 
@@ -36,6 +39,7 @@ namespace Step8
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            oldState = Keyboard.GetState();
         }
 
         /// <summary>
@@ -44,24 +48,23 @@ namespace Step8
         /// </summary>
         /// 
 
+        
+
         SpriteFont scoreFont;
         int score = 0;
 
-        Texture2D texture1;
-        Texture2D texture2;
-        Vector2 spritePosition1;
-        Vector2 spritePosition2;
-        Vector2 spriteSpeed1 = new Vector2(50.0f, 50.0f);
-        Vector2 spriteSpeed2 = new Vector2(100.0f, 100.0f);
-        Vector2 origin1;
-        Vector2 origin2;
+        Texture2D ship;
+        Vector2 shipPosition;
+        Vector2 shipSpeed = new Vector2(0.0f, 0.0f);
+        int shipHeight;
+        int shipWidth;
 
-        int sprite1Height;
-        int sprite1Width;
-        int sprite2Height;
-        int sprite2Width;
-
-        float RotationAngle;
+        Texture2D rocket;
+        List<Vector2> rocketPosition = new List<Vector2>();
+        List<Vector2> rocketSpeed = new List<Vector2>();
+        int rocketHeight;
+        int rocketWidth;
+        int rocketMax = 99;
 
         SoundEffect soundEffect;
         SoundEffect music;
@@ -79,8 +82,8 @@ namespace Step8
 
             scoreFont = Content.Load<SpriteFont>("SpriteFont1");
 
-            texture1 = Content.Load<Texture2D>("elite-knight");
-            texture2 = Content.Load<Texture2D>("elite-knight");
+            ship = Content.Load<Texture2D>("Galaga_ship");
+            rocket = Content.Load<Texture2D>("rocket");
 
             soundEffect = Content.Load<SoundEffect>("Swords_Collide-Sound");
             music = Content.Load<SoundEffect>("siren");
@@ -89,23 +92,15 @@ namespace Step8
             musicInstance = music.CreateInstance();
             //musicInstance.IsLooped = true;
 
-            sprite1Height = texture1.Bounds.Height;
-            sprite1Width = texture1.Bounds.Width;
+            shipHeight = ship.Bounds.Height;
+            shipWidth = ship.Bounds.Width;
 
-            sprite2Height = texture2.Bounds.Height;
-            sprite2Width = texture2.Bounds.Width;
+            shipPosition.X = graphics.GraphicsDevice.Viewport.Width/2;
+            shipPosition.Y = graphics.GraphicsDevice.Viewport.Height - 3*shipHeight;
 
-            spritePosition1.X = sprite1Width;
-            spritePosition1.Y = sprite1Height;
+            rocketHeight = rocket.Bounds.Height;
+            rocketWidth = rocket.Bounds.Width;
 
-            spritePosition2.X = graphics.GraphicsDevice.Viewport.Width - texture2.Width;
-            spritePosition2.Y = graphics.GraphicsDevice.Viewport.Height - texture2.Height;
-
-            origin1.X = sprite1Width / 2;
-            origin1.Y = sprite1Height / 2;
-
-            origin2.X = sprite2Width / 2;
-            origin2.Y = sprite2Height / 2;
 
         }
 
@@ -133,93 +128,132 @@ namespace Step8
             // The time since Update was called last.
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            RotationAngle += elapsed;
-            float circle = MathHelper.Pi * 2;
-            RotationAngle = RotationAngle % circle;
-
             // Move the sprite around
-            UpdateSprite(gameTime, ref spritePosition1, ref spriteSpeed1);
-            UpdateSprite(gameTime, ref spritePosition2, ref spriteSpeed2);
+            UpdateShip(gameTime, ref shipPosition, ref shipSpeed);
+            UpdateRocket(gameTime, ref rocketPosition, ref rocketSpeed);
             CheckForCollision();
 
             base.Update(gameTime);
         }
 
-        void UpdateSprite(GameTime gameTime, ref Vector2 spritePosition, ref Vector2 spriteSpeed)
+        void UpdateShip(GameTime gameTime, ref Vector2 shipPosition, ref Vector2 shipSpeed)
         {
 
             // Move the sprite by speed, scaled by elapsed time 
+            KeyboardState newState = Keyboard.GetState();
 
-            spritePosition += spriteSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (newState.IsKeyDown(Keys.Right) && newState.IsKeyUp(Keys.Left))
+            {
+                shipSpeed.X = 200.0f;
+            }
 
-            int MaxX = graphics.GraphicsDevice.Viewport.Width - texture1.Width/2;
-            int MinX = texture1.Width/2;
-            int MaxY = graphics.GraphicsDevice.Viewport.Height - texture1.Height/2;
-            int MinY = texture1.Height/2;
+            else if (newState.IsKeyDown(Keys.Left) && newState.IsKeyUp(Keys.Right))
+            {
+                shipSpeed.X = -200.0f;
+            }
+            else
+            {
+                shipSpeed.X = 0.0f;
+            }
+
+            shipPosition += shipSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            //spritePosition += spriteSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            int MaxX = graphics.GraphicsDevice.Viewport.Width - ship.Width;
+            int MinX = 0;
+            int MaxY = graphics.GraphicsDevice.Viewport.Height - ship.Height;
+            int MinY = 0;
 
             // Check for bounce 
 
-            if (spritePosition.X > MaxX)
+            if (shipPosition.X > MaxX)
             {
 
-                spriteSpeed.X *= -1;
-                spritePosition.X = MaxX;
+                shipSpeed.X = 0;
+                shipPosition.X = MaxX;
             }
 
-            else if (spritePosition.X < MinX)
+            else if (shipPosition.X < MinX)
             {
 
-                spriteSpeed.X *= -1;
-                spritePosition.X = MinX;
+                shipSpeed.X = 0;
+                shipPosition.X = MinX;
             }
 
-            if (spritePosition.Y > MaxY)
+        }
+
+        void UpdateRocket(GameTime gameTime, ref List<Vector2> rocketPosition, ref List<Vector2> rocketSpeed)
+        {
+            int MaxX = graphics.GraphicsDevice.Viewport.Width;
+            int MinX = 0;
+            int MaxY = graphics.GraphicsDevice.Viewport.Height;
+            int MinY = 0;
+
+
+            // Move the sprite by speed, scaled by elapsed time 
+            KeyboardState newState = Keyboard.GetState();
+
+            if (newState.IsKeyDown(Keys.Space) && oldState.IsKeyUp(Keys.Space))
             {
-
-                spriteSpeed.Y *= -1;
-                spritePosition.Y = MaxY;
+                if (rocketPosition.Count < rocketMax)
+                {
+                    rocketPosition.Add(new Vector2(shipPosition.X + shipWidth/2 - rocketWidth/2, shipPosition.Y));
+                    rocketSpeed.Add(new Vector2(0, -500.0f));
+                }
             }
 
-            else if (spritePosition.Y < MinY)
+
+            for (int i = 0; i < rocketPosition.Count; i++)
             {
+                rocketPosition[i] += rocketSpeed[i] * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                spriteSpeed.Y *= -1;
-                spritePosition.Y = MinY;
+                if (rocketPosition[i].Y > MaxY)
+                {
+                    rocketPosition.RemoveAt(i);
+                    rocketSpeed.RemoveAt(i);
+                }
+                else if (rocketPosition[i].Y < MinY)
+                {
+                    rocketPosition.RemoveAt(i);
+                    rocketSpeed.RemoveAt(i);
+                }
             }
+            oldState = newState;
         }
 
         void CheckForCollision()
         {
 
-            BoundingBox bb1 = new BoundingBox(new Vector3(spritePosition1.X - (sprite1Width / 2), spritePosition1.Y - (sprite1Height / 2), 0), new Vector3(spritePosition1.X + (sprite1Width / 2), spritePosition1.Y + (sprite1Height / 2), 0));
+            //BoundingBox bb1 = new BoundingBox(new Vector3(spritePosition1.X - (sprite1Width / 2), spritePosition1.Y - (sprite1Height / 2), 0), new Vector3(spritePosition1.X + (sprite1Width / 2), spritePosition1.Y + (sprite1Height / 2), 0));
 
-            BoundingBox bb2 = new BoundingBox(new Vector3(spritePosition2.X - (sprite2Width / 2), spritePosition2.Y - (sprite2Height / 2), 0), new Vector3(spritePosition2.X + (sprite2Width / 2), spritePosition2.Y + (sprite2Height / 2), 0));
+            //BoundingBox bb2 = new BoundingBox(new Vector3(spritePosition2.X - (sprite2Width / 2), spritePosition2.Y - (sprite2Height / 2), 0), new Vector3(spritePosition2.X + (sprite2Width / 2), spritePosition2.Y + (sprite2Height / 2), 0));
 
-            if (bb1.Intersects(bb2))
-            {
-                spriteSpeed1.X *= -1;
-                spriteSpeed1.Y *= -1;
+            //if (bb1.Intersects(bb2))
+            //{
+            //    spriteSpeed1.X *= -1;
+            //    spriteSpeed1.Y *= -1;
 
-                spriteSpeed2.X *= -1;
-                spriteSpeed2.Y *= -1;
+            //    spriteSpeed2.X *= -1;
+              //  spriteSpeed2.Y *= -1;
 
-                score++;
+                //score++;
 
-                collide = true;
+                //collide = true;
 
-                musicInstance.Stop();
+                //musicInstance.Stop();
                 
-                soundInstance.Play();
+                //soundInstance.Play();
 
-            }
-            else
-            {
-                if(musicInstance.State != SoundState.Playing && soundInstance.State != SoundState.Playing && collide)
-                {
-                    musicInstance.Play();
-                    collide = false;
-                }
-            }
+            //}
+            //else
+            //{
+              //  if(musicInstance.State != SoundState.Playing && soundInstance.State != SoundState.Playing && collide)
+                //{
+                  //  musicInstance.Play();
+                    //collide = false;
+               // }
+            //}
         }
 
         /// <summary>
@@ -234,14 +268,21 @@ namespace Step8
 
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
 
-            spriteBatch.DrawString(scoreFont, "Times Collided: " + score.ToString(), new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(scoreFont, "SCORE " + score.ToString(), new Vector2(10, 10), Color.White);
 
-            spriteBatch.Draw(texture1, spritePosition1, null, Color.White, RotationAngle, origin1, 1.0f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(ship, shipPosition, Color.White);
+
+
+            for (int i = 0; i < rocketPosition.Count; i++)
+            {
+                spriteBatch.Draw(rocket, rocketPosition[i], Color.White);
+            }
+            
             spriteBatch.End();
 
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-            spriteBatch.Draw(texture2, spritePosition2, null, Color.White, 2*RotationAngle, origin2, 1.0f, SpriteEffects.None, 0f);
-            spriteBatch.End();
+            //spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            //spriteBatch.Draw(texture2, spritePosition2, null, Color.White, 2*RotationAngle, origin2, 1.0f, SpriteEffects.None, 0f);
+            //spriteBatch.End();
 
             base.Draw(gameTime);
         }
