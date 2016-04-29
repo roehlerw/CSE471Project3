@@ -248,8 +248,6 @@ namespace Step8
             int MaxX = graphics.GraphicsDevice.Viewport.Width;
             int MinX = 0;
             Vector2 enemyShiftY = new Vector2(0.0f, 50.0f);
-            //int enemyShiftY = 50;
-            int enemySpacing = graphics.GraphicsDevice.Viewport.Width / totalEnemies;
 
             for (int i = 0; i < totalEnemies; i++)
             {
@@ -276,6 +274,36 @@ namespace Step8
 
         void CheckForCollision()
         {
+            List<BoundingBox> enemyBoxes = new List<BoundingBox>();
+            List<BoundingBox> rocketBoxes = new List<BoundingBox>();
+
+            for (int i = 0; i < totalEnemies; i++)
+            {
+                enemyBoxes.Add(new BoundingBox(new Vector3(enemyPosition[i].X - (enemyWidth / 2), enemyPosition[i].Y - (enemyHeight / 2), 0), new Vector3(enemyPosition[i].X + (enemyWidth / 2), enemyPosition[i].Y + (enemyHeight / 2), 0)));
+            }
+
+            for (int j = 0; j < rocketPosition.Count; j++)
+            {
+                rocketBoxes.Add(new BoundingBox(new Vector3(rocketPosition[j].X - (rocketWidth / 2), rocketPosition[j].Y - (rocketHeight / 2), 0), new Vector3(rocketPosition[j].X + (rocketWidth / 2), rocketPosition[j].Y + (rocketHeight / 2), 0)));
+            }
+
+            for (int i = 0; i < totalEnemies; i++)
+            {
+                for (int j = 0; j < rocketPosition.Count; j++)
+                {
+                    if (enemyBoxes[i].Intersects(rocketBoxes[j]))
+                    {
+                        enemyPosition.RemoveAt(i);
+                        enemySpeed.RemoveAt(i);
+                        rocketPosition.RemoveAt(j);
+                        rocketSpeed.RemoveAt(j);
+                        totalEnemies--;
+
+                        score++;
+                    }
+                }
+            }
+
 
             //BoundingBox bb1 = new BoundingBox(new Vector3(spritePosition1.X - (sprite1Width / 2), spritePosition1.Y - (sprite1Height / 2), 0), new Vector3(spritePosition1.X + (sprite1Width / 2), spritePosition1.Y + (sprite1Height / 2), 0));
 
