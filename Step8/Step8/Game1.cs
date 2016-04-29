@@ -40,6 +40,7 @@ namespace Step8
 
             base.Initialize();
             oldState = Keyboard.GetState();
+
         }
 
         /// <summary>
@@ -66,6 +67,13 @@ namespace Step8
         int rocketWidth;
         int rocketMax = 99;
 
+        Texture2D enemy;
+        List<Vector2> enemyPosition = new List<Vector2>();
+        List<Vector2> enemySpeed = new List<Vector2>();
+        int enemyHeight;
+        int enemyWidth;
+        int totalEnemies = 4;
+
         SoundEffect soundEffect;
         SoundEffect music;
 
@@ -84,6 +92,7 @@ namespace Step8
 
             ship = Content.Load<Texture2D>("Galaga_ship");
             rocket = Content.Load<Texture2D>("rocket");
+            enemy = Content.Load<Texture2D>("Enemy_Ship");
 
             soundEffect = Content.Load<SoundEffect>("Swords_Collide-Sound");
             music = Content.Load<SoundEffect>("siren");
@@ -101,6 +110,17 @@ namespace Step8
             rocketHeight = rocket.Bounds.Height;
             rocketWidth = rocket.Bounds.Width;
 
+            enemyHeight = enemy.Bounds.Height;
+            enemyWidth = enemy.Bounds.Width;
+
+            int enemySpacing = graphics.GraphicsDevice.Viewport.Width / totalEnemies;
+
+            for (int i = 0; i < totalEnemies; i++)
+            {
+                //enemyPosition.Add(new Vector2(graphics.GraphicsDevice.Viewport.Width / i - enemyWidth / 2, 500 ) );
+                enemyPosition.Add(new Vector2(enemySpacing * i, 200));
+                enemySpeed.Add(new Vector2(-50.0f, 0));
+            }
 
         }
 
@@ -131,6 +151,7 @@ namespace Step8
             // Move the sprite around
             UpdateShip(gameTime, ref shipPosition, ref shipSpeed);
             UpdateRocket(gameTime, ref rocketPosition, ref rocketSpeed);
+            UpdateEnemies(gameTime, ref enemyPosition, ref enemySpeed);
             CheckForCollision();
 
             base.Update(gameTime);
@@ -222,6 +243,37 @@ namespace Step8
             oldState = newState;
         }
 
+        void UpdateEnemies(GameTime gameTime, ref List<Vector2> enemyPosition, ref List<Vector2> enemySpeed)
+        {
+            int MaxX = graphics.GraphicsDevice.Viewport.Width;
+            int MinX = 0;
+            Vector2 enemyShiftY = new Vector2(0.0f, 50.0f);
+            //int enemyShiftY = 50;
+            int enemySpacing = graphics.GraphicsDevice.Viewport.Width / totalEnemies;
+
+            for (int i = 0; i < totalEnemies; i++)
+            {
+                enemyPosition[i] += enemySpeed[i] * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (enemyPosition[i].X > MaxX - enemyWidth)
+                {
+                    for (int j = 0; j < totalEnemies; j++)
+                    {
+                        enemySpeed[j] *= -1;
+                        enemyPosition[j]  += enemyShiftY;
+                    } 
+                }
+                else if (enemyPosition[i].X < MinX)
+                {
+                    for (int j = 0; j < totalEnemies; j++)
+                    {
+                        enemySpeed[j] *= -1;
+                        enemyPosition[j] += enemyShiftY;
+                    }
+                }
+            }
+        }
+
         void CheckForCollision()
         {
 
@@ -276,6 +328,11 @@ namespace Step8
             for (int i = 0; i < rocketPosition.Count; i++)
             {
                 spriteBatch.Draw(rocket, rocketPosition[i], Color.White);
+            }
+
+            for (int i = 0; i < totalEnemies; i++)
+            {
+                spriteBatch.Draw(enemy, enemyPosition[i], Color.White);
             }
             
             spriteBatch.End();
