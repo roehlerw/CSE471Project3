@@ -80,6 +80,21 @@ namespace Step8
         SoundEffectInstance soundInstance;
         SoundEffectInstance musicInstance;
 
+        //Sound effect for Galaga Game Music
+        SoundEffect galagaMusic;
+        SoundEffectInstance galagaMusicInstance;
+
+        //Sound effect for firing rockets
+        SoundEffect rocketFire;
+        SoundEffectInstance rocketFireInstance;
+
+        //Sound effect for rocket hits
+        SoundEffect rocketHit;
+        SoundEffectInstance rocketHitInstance;
+
+        bool fireRocket = false;
+        bool hitTarget = false;
+
         bool collide = false;
 
         protected override void LoadContent()
@@ -99,6 +114,17 @@ namespace Step8
 
             soundInstance = soundEffect.CreateInstance();
             musicInstance = music.CreateInstance();
+
+            //Initialize Galaga Music
+            galagaMusic = Content.Load<SoundEffect>("Galaga");
+            galagaMusicInstance = galagaMusic.CreateInstance();
+            //Initialize Rocket Fire Sound Effect
+            rocketFire = Content.Load<SoundEffect>("RocketSound");
+            rocketFireInstance = rocketFire.CreateInstance();
+            //Initialize Rocket Hit Sound Effect
+            rocketHit = Content.Load<SoundEffect>("RocketHit");
+            rocketHitInstance = rocketHit.CreateInstance();
+
             //musicInstance.IsLooped = true;
 
             shipHeight = ship.Bounds.Height;
@@ -144,6 +170,22 @@ namespace Step8
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            //Play rocket fire sound
+            if (fireRocket)
+            {
+                rocketFireInstance.Play();
+                fireRocket = false;
+            }
+            //Play rocket hit target sound
+            if (hitTarget)
+            {
+                rocketHitInstance.Play();
+                hitTarget = false;
+            }
+            
+           
+            if (galagaMusicInstance.State == SoundState.Stopped)
+                galagaMusicInstance.Play();
 
             // The time since Update was called last.
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -217,6 +259,13 @@ namespace Step8
 
             if (newState.IsKeyDown(Keys.Space) && oldState.IsKeyUp(Keys.Space))
             {
+                //Stop any current rocket fire sound
+                if (rocketFireInstance.State == SoundState.Playing)
+                    rocketFireInstance.Stop();
+                //Tells update to play rocket sound(much faster than playing in keypress!)
+                fireRocket = true;
+            
+
                 if (rocketPosition.Count < rocketMax)
                 {
                     rocketPosition.Add(new Vector2(shipPosition.X + shipWidth/2 - rocketWidth/2, shipPosition.Y));
@@ -293,6 +342,11 @@ namespace Step8
                 {
                     if (enemyBoxes[i].Intersects(rocketBoxes[j]))
                     {
+                        if (rocketHitInstance.State == SoundState.Playing)
+                            rocketHitInstance.Stop();
+                        hitTarget = true;
+                        //rocketHitInstance.Play();
+
                         enemyPosition.RemoveAt(i);
                         enemySpeed.RemoveAt(i);
                         rocketPosition.RemoveAt(j);
