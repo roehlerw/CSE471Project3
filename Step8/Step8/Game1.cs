@@ -54,6 +54,12 @@ namespace Step8
         SpriteFont scoreFont;
         int score = 0;
 
+
+        Texture2D background;
+        Rectangle mainframe;
+        Nullable<Rectangle> sourceBackground = null;
+        Vector2 originBackground;
+
         Texture2D ship;
         Vector2 shipPosition;
         Vector2 shipSpeed = new Vector2(0.0f, 0.0f);
@@ -102,6 +108,10 @@ namespace Step8
             // Create a new SpriteBatch, which can be used to draw textures
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            background = Content.Load<Texture2D>("background");
+            mainframe = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+            originBackground = new Vector2(mainframe.X, mainframe.Y);
 
             scoreFont = Content.Load<SpriteFont>("SpriteFont1");
 
@@ -397,11 +407,15 @@ namespace Step8
         protected override void Draw(GameTime gameTime)
         {
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            
             // Draw the sprite
-
+           
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
-
+            
+            spriteBatch.Draw(background, mainframe, sourceBackground,  Color.White, 0,originBackground,SpriteEffects.None, 1);
+            //spriteBatch.Draw(background,mainframe,Color.White);
+            
+            
             spriteBatch.DrawString(scoreFont, "SCORE " + score.ToString(), new Vector2(10, 10), Color.White);
 
             spriteBatch.Draw(ship, shipPosition, Color.White);
