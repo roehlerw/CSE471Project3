@@ -23,6 +23,7 @@ namespace Step8
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            // change back to 1000!
             graphics.PreferredBackBufferHeight = 1000;
             graphics.PreferredBackBufferWidth = 600;
             Content.RootDirectory = "Content";
@@ -49,11 +50,11 @@ namespace Step8
         /// </summary>
         /// 
 
-        
-
         SpriteFont scoreFont;
         int score = 0;
 
+        SpriteFont levelFont;
+        int level = 1;
 
         Texture2D background;
         Rectangle mainframe;
@@ -114,6 +115,7 @@ namespace Step8
             originBackground = new Vector2(mainframe.X, mainframe.Y);
 
             scoreFont = Content.Load<SpriteFont>("SpriteFont1");
+            levelFont = Content.Load<SpriteFont>("SpriteFont1");
 
             ship = Content.Load<Texture2D>("Galaga_ship");
             rocket = Content.Load<Texture2D>("rocket");
@@ -363,6 +365,23 @@ namespace Step8
                         rocketSpeed.RemoveAt(j);
                         totalEnemies--;
 
+                        // defeated all the enemies
+                        if (!enemyPosition.Any())
+                        {
+                            // go to the next level
+                            level++;
+                            // add more enemies once you beat the level
+                            totalEnemies = 4;
+
+                            int enemySpacing = graphics.GraphicsDevice.Viewport.Width / totalEnemies;
+
+                            for (int k = 0; k < totalEnemies; k++)
+                            {
+                                enemyPosition.Add(new Vector2(enemySpacing * k, 200));
+                                enemySpeed.Add(new Vector2(-50.0f * (level / 1.8f), 0));
+                            }
+                        }
+
                         score++;
                     }
                 }
@@ -417,6 +436,8 @@ namespace Step8
             
             
             spriteBatch.DrawString(scoreFont, "SCORE " + score.ToString(), new Vector2(10, 10), Color.White);
+
+            spriteBatch.DrawString(levelFont, "LEVEL " + level.ToString(), new Vector2(510, 10), Color.White);
 
             spriteBatch.Draw(ship, shipPosition, Color.White);
 
