@@ -55,6 +55,7 @@ namespace Step8
 
         SpriteFont levelFont;
         int level = 1;
+        int next_enemy_shot = 0;
 
         Texture2D background;
         Rectangle mainframe;
@@ -68,8 +69,8 @@ namespace Step8
         int shipWidth;
 
         Texture2D rocket;
-        List<Vector2> rocketPosition = new List<Vector2>();
-        List<Vector2> rocketSpeed = new List<Vector2>();
+        List<Vector3> rocketPosition = new List<Vector3>();
+        List<Vector3> rocketSpeed = new List<Vector3>();
         int rocketHeight;
         int rocketWidth;
         int rocketMax = 99;
@@ -258,7 +259,7 @@ namespace Step8
 
         }
 
-        void UpdateRocket(GameTime gameTime, ref List<Vector2> rocketPosition, ref List<Vector2> rocketSpeed)
+        void UpdateRocket(GameTime gameTime, ref List<Vector3> rocketPosition, ref List<Vector3> rocketSpeed)
         {
             int MaxX = graphics.GraphicsDevice.Viewport.Width;
             int MinX = 0;
@@ -280,8 +281,8 @@ namespace Step8
 
                 if (rocketPosition.Count < rocketMax)
                 {
-                    rocketPosition.Add(new Vector2(shipPosition.X + shipWidth/2 - rocketWidth/2, shipPosition.Y));
-                    rocketSpeed.Add(new Vector2(0, -500.0f));
+                    rocketPosition.Add(new Vector3(shipPosition.X + shipWidth/2 - rocketWidth/2, shipPosition.Y, 0));
+                    rocketSpeed.Add(new Vector3(0, -500.0f, 0));
                 }
             }
 
@@ -313,7 +314,6 @@ namespace Step8
             for (int i = 0; i < totalEnemies; i++)
             {
                 enemyPosition[i] += enemySpeed[i] * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
                 if (enemyPosition[i].X > MaxX - enemyWidth)
                 {
                     for (int j = 0; j < totalEnemies; j++)
@@ -331,27 +331,58 @@ namespace Step8
                     }
                 }
             }
+            if ( next_enemy_shot > 400 / level )
+            {
+                Random rnd = new Random();
+                AddEnemyShot(enemyPosition[rnd.Next(0, totalEnemies)]);
+                next_enemy_shot = 0;
+            }
+            next_enemy_shot++;
         }
+
+        void AddEnemyShot(Vector2 enemyPosition)
+        {
+            if (rocketFireInstance.State == SoundState.Playing)
+                rocketFireInstance.Stop();
+            //Tells update to play rocket sound(much faster than playing in keypress!)
+            fireRocket = true;
+
+            rocketPosition.Add(new Vector3(enemyPosition.X + enemyWidth / 2 - rocketWidth / 2, enemyPosition.Y + (1.5f*enemyHeight), -1));
+            rocketSpeed.Add(new Vector3(0, 500.0f, 0));
+        }
+
 
         void CheckForCollision()
         {
             List<BoundingBox> enemyBoxes = new List<BoundingBox>();
             List<BoundingBox> rocketBoxes = new List<BoundingBox>();
+            List<BoundingBox> enemyrocketBoxes = new List<BoundingBox>();
+            List<BoundingBox> spaceCraftBoxes = new List<BoundingBox>();
             bool round_cleared = false;
 
             for (int i = 0; i < totalEnemies; i++)
             {
                 enemyBoxes.Add(new BoundingBox(new Vector3(enemyPosition[i].X - (enemyWidth / 2), enemyPosition[i].Y - (enemyHeight / 2), 0), new Vector3(enemyPosition[i].X + (enemyWidth / 2), enemyPosition[i].Y + (enemyHeight / 2), 0)));
             }
-
+            int userRockets = 0;
+            int enemyRockets = 0;
             for (int j = 0; j < rocketPosition.Count; j++)
             {
-                rocketBoxes.Add(new BoundingBox(new Vector3(rocketPosition[j].X - (rocketWidth / 2), rocketPosition[j].Y - (rocketHeight / 2), 0), new Vector3(rocketPosition[j].X + (rocketWidth / 2), rocketPosition[j].Y + (rocketHeight / 2), 0)));
+                if (rocketPosition[j].Z == 0)
+                {
+                    rocketBoxes.Add(new BoundingBox(new Vector3(rocketPosition[j].X - (rocketWidth / 2), rocketPosition[j].Y - (rocketHeight / 2), 0), new Vector3(rocketPosition[j].X + (rocketWidth / 2), rocketPosition[j].Y + (rocketHeight / 2), 0)));
+                    userRockets++;
+                }
+                else
+                {
+                    enemyrocketBoxes.Add(new BoundingBox(new Vector3(rocketPosition[j].X - (rocketWidth / 2), rocketPosition[j].Y - (rocketHeight / 2), 0), new Vector3(rocketPosition[j].X + (rocketWidth / 2), rocketPosition[j].Y + (rocketHeight / 2), 0)));
+                    enemyRockets++;
+                }
             }
 
             for (int i = 0; i < totalEnemies; i++)
             {
-                for (int j = 0; j < rocketPosition.Count; j++)
+                for (int j = 0; j < userRockets; j++)
                 {
                     if (!round_cleared && enemyBoxes[i].Intersects(rocketBoxes[j]))
                     {
@@ -388,6 +419,16 @@ namespace Step8
                     }
                 }
             }
+            BoundingBox shipBox = new BoundingBox(new Vector3(shipPosition.X - (shipWidth / 2), shipPosition.Y - (shipHeight / 2), 0), new Vector3(shipPosition.X + (shipWidth / 2), shipPosition.Y + (shipHeight / 2), 0));
+            for (int i = 0; i < enemyRockets; i++)
+            {
+                if (shipBox.Intersects(enemyrocketBoxes[i]))
+                {
+                    // TODO END OF GAME!!
+                    int lol = 0;
+                }
+            }
+                
 
 
             //BoundingBox bb1 = new BoundingBox(new Vector3(spritePosition1.X - (sprite1Width / 2), spritePosition1.Y - (sprite1Height / 2), 0), new Vector3(spritePosition1.X + (sprite1Width / 2), spritePosition1.Y + (sprite1Height / 2), 0));
@@ -446,7 +487,8 @@ namespace Step8
 
             for (int i = 0; i < rocketPosition.Count; i++)
             {
-                spriteBatch.Draw(rocket, rocketPosition[i], Color.White);
+                Vector2 temp = new Vector2(rocketPosition[i].X, rocketPosition[i].Y);
+                spriteBatch.Draw(rocket, temp, Color.White);
             }
 
             for (int i = 0; i < totalEnemies; i++)
