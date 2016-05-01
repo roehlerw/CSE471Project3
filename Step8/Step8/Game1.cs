@@ -337,6 +337,7 @@ namespace Step8
         {
             List<BoundingBox> enemyBoxes = new List<BoundingBox>();
             List<BoundingBox> rocketBoxes = new List<BoundingBox>();
+            bool round_cleared = false;
 
             for (int i = 0; i < totalEnemies; i++)
             {
@@ -352,7 +353,7 @@ namespace Step8
             {
                 for (int j = 0; j < rocketPosition.Count; j++)
                 {
-                    if (enemyBoxes[i].Intersects(rocketBoxes[j]))
+                    if (!round_cleared && enemyBoxes[i].Intersects(rocketBoxes[j]))
                     {
                         if (rocketHitInstance.State == SoundState.Playing)
                             rocketHitInstance.Stop();
@@ -368,6 +369,7 @@ namespace Step8
                         // defeated all the enemies
                         if (!enemyPosition.Any())
                         {
+                            round_cleared = true;
                             // go to the next level
                             level++;
                             // add more enemies once you beat the level
