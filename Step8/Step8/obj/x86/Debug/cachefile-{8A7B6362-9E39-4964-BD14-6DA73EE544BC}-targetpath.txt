@@ -1,0 +1,10 @@
+Content\Swords_Collide-Sound.xnb
+Content\siren.xnb
+Content\Galaga_ship.xnb
+Content\SpriteFont1.xnb
+Content\rocket.xnb
+Content\Enemy_Ship.xnb
+Content\RocketHit.xnb
+Content\Galaga.xnb
+Content\RocketSound.xnb
+Content\background.xnb

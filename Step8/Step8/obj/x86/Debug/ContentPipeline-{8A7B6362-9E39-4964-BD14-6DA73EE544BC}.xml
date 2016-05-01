@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Swords_Collide-Sound.wav</Source>
+      <Name>Swords_Collide-Sound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb</Output>
+      <Time>2016-04-16T15:49:27.9758851-04:00</Time>
+    </Item>
+    <Item>
+      <Source>siren.wav</Source>
+      <Name>siren</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\siren.xnb</Output>
+      <Time>2016-04-21T16:35:38.6647383-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Galaga_ship.png</Source>
+      <Name>Galaga_ship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb</Output>
+      <Time>2016-04-26T20:38:18.9704381-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2016-04-20T15:48:07.949028-04:00</Time>
+    </Item>
+    <Item>
+      <Source>rocket.png</Source>
+      <Name>rocket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\rocket.xnb</Output>
+      <Time>2016-04-26T21:09:01.5292002-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Enemy_Ship.png</Source>
+      <Name>Enemy_Ship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb</Output>
+      <Time>2016-04-30T23:34:10.8085439-04:00</Time>
+    </Item>
+    <Item>
+      <Source>RocketHit.wav</Source>
+      <Name>RocketHit</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb</Output>
+      <Time>2016-04-30T23:34:10.8842091-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Galaga.wav</Source>
+      <Name>Galaga</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb</Output>
+      <Time>2016-04-30T23:34:10.8782044-04:00</Time>
+    </Item>
+    <Item>
+      <Source>RocketSound.wav</Source>
+      <Name>RocketSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb</Output>
+      <Time>2016-04-30T23:34:10.8892127-04:00</Time>
+    </Item>
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2016-04-30T23:34:10.8952281-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{8A7B6362-9E39-4964-BD14-6DA73EE544BC}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-04-16T14:33:10.5353905-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
