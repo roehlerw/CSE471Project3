@@ -5,7 +5,7 @@ When all of the enemies are destroyed, you will advance to the next level, and t
 
 Group Members and Responsibilities: 
 1. Edward Maxwell - 
-2. James Dodge - 
+2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
 3. James Torres - 
 4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up.
 5. Wyatt Roehler - Ship movement, rocket firing, ship texture, rocket texture.
