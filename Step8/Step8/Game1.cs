@@ -319,7 +319,10 @@ namespace Step8
                     for (int j = 0; j < totalEnemies; j++)
                     {
                         enemySpeed[j] *= -1;
-                        enemyPosition[j]  += enemyShiftY;
+                        if (enemyPosition[j].Y < shipPosition.Y)
+                        {
+                            enemyPosition[j] += enemyShiftY;
+                        }
                     } 
                 }
                 else if (enemyPosition[i].X < MinX)
@@ -327,7 +330,10 @@ namespace Step8
                     for (int j = 0; j < totalEnemies; j++)
                     {
                         enemySpeed[j] *= -1;
-                        enemyPosition[j] += enemyShiftY;
+                        if (enemyPosition[j].Y < shipPosition.Y)
+                        {
+                            enemyPosition[j] += enemyShiftY;
+                        }
                     }
                 }
             }
@@ -426,6 +432,17 @@ namespace Step8
                 {
                     // TODO END OF GAME!!
                     int lol = 0;
+                }
+            }
+            if (!round_cleared)
+            {
+                for (int i = 0; i < totalEnemies; i++)
+                {
+                    if (shipBox.Intersects(enemyBoxes[i]))
+                    {
+                        // TODO END OF GAME!!
+                        int lol = 0;
+                    }
                 }
             }
                 
