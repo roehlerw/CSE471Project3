@@ -495,6 +495,15 @@ namespace Step8
             {
                 spriteBatch.Draw(enemy, enemyPosition[i], Color.White);
             }
+
+            if (level == 4)
+            {
+                enemy = Content.Load<Texture2D>("Enemy_Ship2");
+            }
+            if (level == 7)
+            {
+                enemy = Content.Load<Texture2D>("Enemy_Ship3");
+            }
             
             spriteBatch.End();
 

@@ -24,3 +24,21 @@ C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Ste
 C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
 C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
 C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\background.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Step8.exe
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Step8.pdb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Step8.exe
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Step8.pdb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship2.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship3.xnb
