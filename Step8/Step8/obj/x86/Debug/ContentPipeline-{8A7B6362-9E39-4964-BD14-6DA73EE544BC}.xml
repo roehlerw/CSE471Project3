@@ -7,8 +7,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb</Output>
-      <Time>2016-05-01T20:12:46.4354896-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb</Output>
+      <Time>2016-05-01T10:34:05.9141878-04:00</Time>
     </Item>
     <Item>
       <Source>Swords_Collide-Sound.wav</Source>
@@ -16,8 +16,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb</Output>
-      <Time>2016-05-01T20:12:46.5051223-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb</Output>
+      <Time>2016-05-01T10:34:06.0867195-04:00</Time>
     </Item>
     <Item>
       <Source>siren.wav</Source>
@@ -25,8 +25,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb</Output>
-      <Time>2016-05-01T20:12:46.4615554-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb</Output>
+      <Time>2016-05-01T10:34:05.9752412-04:00</Time>
     </Item>
     <Item>
       <Source>Galaga.wav</Source>
@@ -34,8 +34,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb</Output>
-      <Time>2016-05-01T20:12:46.2838875-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb</Output>
+      <Time>2016-05-01T10:34:05.8831748-04:00</Time>
     </Item>
     <Item>
       <Source>RocketSound.wav</Source>
@@ -43,8 +43,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb</Output>
-      <Time>2016-05-01T20:12:46.4425111-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb</Output>
+      <Time>2016-05-01T10:34:05.9301984-04:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont1.spritefont</Source>
@@ -52,8 +52,17 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2016-05-01T20:12:46.4986021-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2016-05-01T10:34:06.0369313-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont2.spritefont</Source>
+      <Name>SpriteFont2</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
+      <Time>2016-05-03T11:49:14.0135893-04:00</Time>
     </Item>
     <Item>
       <Source>Galaga_ship.png</Source>
@@ -61,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb</Output>
-      <Time>2016-05-01T20:12:46.4076359-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb</Output>
+      <Time>2016-05-01T10:34:05.8901731-04:00</Time>
     </Item>
     <Item>
       <Source>rocket.png</Source>
@@ -70,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb</Output>
-      <Time>2016-05-01T20:12:46.4236788-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb</Output>
+      <Time>2016-05-01T10:34:05.8951758-04:00</Time>
     </Item>
     <Item>
       <Source>Enemy_Ship.png</Source>
@@ -79,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb</Output>
-      <Time>2016-05-01T20:12:46.2169434-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb</Output>
+      <Time>2016-05-01T10:34:05.7195483-04:00</Time>
     </Item>
     <Item>
       <Source>background.png</Source>
@@ -88,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2016-05-01T20:12:46.215441-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2016-05-01T10:34:05.7135398-04:00</Time>
     </Item>
     <Item>
       <Source>Enemy_Ship2.png</Source>
@@ -97,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship2.xnb</Output>
-      <Time>2016-05-01T20:47:30.7666753-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship2.xnb</Output>
+      <Time>2016-05-03T11:12:41.6724991-04:00</Time>
     </Item>
     <Item>
       <Source>Enemy_Ship3.png</Source>
@@ -106,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship3.xnb</Output>
-      <Time>2016-05-01T20:47:41.3683154-04:00</Time>
+      <Output>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship3.xnb</Output>
+      <Time>2016-05-03T11:12:41.6744988-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -116,10 +125,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -148,7 +157,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-04-20T16:42:17.2979558-04:00</Value>
+        <Value>2016-04-14T15:58:30.7842415-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

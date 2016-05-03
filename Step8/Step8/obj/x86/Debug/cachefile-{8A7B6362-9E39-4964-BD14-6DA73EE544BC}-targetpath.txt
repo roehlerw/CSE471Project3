@@ -4,6 +4,7 @@ Content\siren.xnb
 Content\Galaga.xnb
 Content\RocketSound.xnb
 Content\SpriteFont1.xnb
+Content\SpriteFont2.xnb
 Content\Galaga_ship.xnb
 Content\rocket.xnb
 Content\Enemy_Ship.xnb

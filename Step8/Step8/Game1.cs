@@ -19,6 +19,7 @@ namespace Step8
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         KeyboardState oldState;
+        bool endgame = false;
 
         public Game1()
         {
@@ -56,6 +57,8 @@ namespace Step8
         SpriteFont levelFont;
         int level = 1;
         int next_enemy_shot = 0;
+
+        SpriteFont endFont;
 
         Texture2D background;
         Rectangle mainframe;
@@ -117,6 +120,7 @@ namespace Step8
 
             scoreFont = Content.Load<SpriteFont>("SpriteFont1");
             levelFont = Content.Load<SpriteFont>("SpriteFont1");
+            endFont = Content.Load<SpriteFont>("SpriteFont2");
 
             ship = Content.Load<Texture2D>("Galaga_ship");
             rocket = Content.Load<Texture2D>("rocket");
@@ -431,7 +435,7 @@ namespace Step8
                 if (shipBox.Intersects(enemyrocketBoxes[i]))
                 {
                     // TODO END OF GAME!!
-                    int lol = 0;
+                    endgame = true;
                 }
             }
             if (!round_cleared)
@@ -441,7 +445,7 @@ namespace Step8
                     if (shipBox.Intersects(enemyBoxes[i]))
                     {
                         // TODO END OF GAME!!
-                        int lol = 0;
+                        endgame = true;
                     }
                 }
             }
@@ -498,6 +502,11 @@ namespace Step8
             spriteBatch.DrawString(scoreFont, "SCORE " + score.ToString(), new Vector2(10, 10), Color.White);
 
             spriteBatch.DrawString(levelFont, "LEVEL " + level.ToString(), new Vector2(510, 10), Color.White);
+
+            if (endgame)
+            {
+                spriteBatch.DrawString(endFont, "GAME OVER", new Vector2(30, 350), Color.White);
+            }
 
             spriteBatch.Draw(ship, shipPosition, Color.White);
 
