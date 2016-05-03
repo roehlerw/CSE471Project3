@@ -13,9 +13,11 @@ Implementation Details:
 		If there is it should flag the game for gameover.
 
 4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up, game over text
-	A. Level advacement: Once all the enemies are defeated, increment the level 		integer	variable and update the text on the screen appropriately.
+	A. Level advacement: Once all the enemies are defeated, increment the level
+		integer	variable and update the text on the screen appropriately.
 	B. Enemy respawn: Once the level is beat, fill the enemy vector again.
-	C. Enemy speed-up: For each level incremented, multiply the enemy speed by a 		factor of what level you are on.
+	C. Enemy speed-up: For each level incremented, multiply the enemy speed by a
+		factor of what level you are on.
 	D. Game over text: One game over is detected, display the appropriate text.
 
 5. Wyatt Roehler - Ship movement, rocket firing, ship texture, rocket texture.
