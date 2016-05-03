@@ -1,0 +1,16 @@
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.exe
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.pdb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.exe
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.pdb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb
+C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb
