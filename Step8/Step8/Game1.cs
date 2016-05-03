@@ -161,7 +161,7 @@ namespace Step8
             for (int i = 0; i < totalEnemies; i++)
             {
                 //enemyPosition.Add(new Vector2(graphics.GraphicsDevice.Viewport.Width / i - enemyWidth / 2, 500 ) );
-                enemyPosition.Add(new Vector2(enemySpacing * i, 200));
+                enemyPosition.Add(new Vector2(enemySpacing * i, 0));
                 enemySpeed.Add(new Vector2(-50.0f, 0));
             }
 
@@ -327,6 +327,10 @@ namespace Step8
                         {
                             enemyPosition[j] += enemyShiftY;
                         }
+                        else
+                        {
+                            endgame = true;
+                        }
                     } 
                 }
                 else if (enemyPosition[i].X < MinX)
@@ -337,6 +341,10 @@ namespace Step8
                         if (enemyPosition[j].Y < shipPosition.Y)
                         {
                             enemyPosition[j] += enemyShiftY;
+                        }
+                        else
+                        {
+                            endgame = true;
                         }
                     }
                 }
@@ -358,7 +366,7 @@ namespace Step8
             fireRocket = true;
 
             rocketPosition.Add(new Vector3(enemyPosition.X + enemyWidth / 2 - rocketWidth / 2, enemyPosition.Y + (1.5f*enemyHeight), -1));
-            rocketSpeed.Add(new Vector3(0, 500.0f, 0));
+            rocketSpeed.Add(new Vector3(0, 250.0f, 0));
         }
 
 
@@ -420,7 +428,7 @@ namespace Step8
 
                             for (int k = 0; k < totalEnemies; k++)
                             {
-                                enemyPosition.Add(new Vector2(enemySpacing * k, 200));
+                                enemyPosition.Add(new Vector2(enemySpacing * k, 0));
                                 enemySpeed.Add(new Vector2(-50.0f * (level / 1.8f), 0));
                             }
                         }
