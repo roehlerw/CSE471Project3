@@ -1,6 +1,10 @@
 Implementation Details:
 
-1. Edward Maxwell - 
+1. Edward Maxwell - Game background, Enemy visual, Game music, Rocket Fire/Hit sounds
+	A. Game background: Implemented a Texture2D background with a layer depth of 1 to make it the background of the game.
+	B. Enemy visual: Updated the enemy alien picture to a colored image that way it differentiates from black background.
+	C. Game music: found and implemented the background music which plays on a loop.
+	D. Rocket Fire/Hit sounds: found/edited and implemented sounds for when the ship fires a rocket as well as when the rocket hits an enemy.
 
 2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
 
