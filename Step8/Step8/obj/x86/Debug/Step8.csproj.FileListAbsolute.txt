@@ -1,16 +1,63 @@
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.exe
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.pdb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.exe
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.pdb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\siren.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Step8.exe
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Step8.pdb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\obj\x86\Debug\Step8.exe
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\obj\x86\Debug\Step8.pdb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\rocket.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
+C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8\bin\x86\Debug\Content\background.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Step8.exe
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Step8.pdb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Step8.exe
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\obj\x86\Debug\Step8.pdb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship2.xnb
+C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship3.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketHit.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Swords_Collide-Sound.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\siren.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\RocketSound.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Galaga_ship.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\rocket.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\background.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship2.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Content\Enemy_Ship3.xnb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.exe
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.pdb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.exe
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.pdb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache
