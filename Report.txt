@@ -1,0 +1,15 @@
+Implementation Details:
+
+1. Edward Maxwell - 
+
+2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
+
+3. James Torres - Game over detection, Rocket/Ship collision, Ememy/Ship collision
+
+4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up, game over text
+	A. Level advacement: Once all the enemies are defeated, increment the level 		integer	variable and update the text on the screen appropriately.
+	B. Enemy respawn: Once the level is beat, fill the enemy vector again.
+	C. Enemy speed-up: For each level incremented, multiply the enemy speed by a 		factor of what level you are on.
+	D. Game over text: One game over is detected, display the appropriate text.
+
+5. Wyatt Roehler - Ship movement, rocket firing, ship texture, rocket texture.
