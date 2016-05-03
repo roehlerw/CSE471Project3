@@ -1,5 +1,0 @@
-C:\Users\emaxw\Source\Repos\CSE471Project3\Step8\Step8Content\obj\x86\Debug\Step8Content.contentprojResolveAssemblyReference.cache
-C:\Users\Wyatt Roehler\Documents\Visual Studio 2015\Projects\Project3-CSE471\Step8\Step8Content\obj\x86\Debug\Step8Content.contentprojResolveAssemblyReference.cache
-C:\Users\James\Documents\SCHOOL\cse471\Project3\Step8\Step8Content\obj\x86\Debug\Step8Content.contentprojResolveAssemblyReference.cache
-C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8Content\obj\x86\Debug\Step8Content.contentprojResolveAssemblyReference.cache
-C:\Users\JAmes Torres\Source\Repos\NewRepo\Step8\Step8Content\obj\x86\Debug\Step8Content.contentprojResolveAssemblyReference.cache
