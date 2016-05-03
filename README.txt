@@ -6,7 +6,7 @@ When all of the enemies are destroyed, you will advance to the next level, and t
 If the ship gets hit by enemy fire, or the enemies reach your ship, it's game over!
 
 Group Members and Responsibilities: 
-1. Edward Maxwell - 
+1. Edward Maxwell - Game background, Enemy visual, Game music, Rocket Fire/Hit sounds
 2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
 3. James Torres - Game over detection, Rocket/Ship collision, Ememy/Ship collision
 4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up, game over text
