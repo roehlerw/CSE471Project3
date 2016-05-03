@@ -7,7 +7,7 @@ If the ship gets hit by enemy fire, or the enemies reach your ship, it's game ov
 
 Group Members and Responsibilities: 
 1. Edward Maxwell - Game background, Enemy visual, Game music, Rocket Fire/Hit sounds
-2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
+2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score, Multiple enemies
 3. James Torres - Game over detection, Rocket/Ship collision, Ememy/Ship collision
 4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up, game over text
 5. Wyatt Roehler - Ship movement, rocket firing, ship texture, rocket texture.
