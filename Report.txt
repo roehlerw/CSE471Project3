@@ -5,6 +5,12 @@ Implementation Details:
 2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
 
 3. James Torres - Game over detection, Rocket/Ship collision, Ememy/Ship collision
+	A. Game over detection: The process of checking all enemies and enemy rockets locations against the ship location
+	B. Rocket/Ship collision: Rockets now stored in vector3. Checks all rockets in the game for a rockets that have a -1 z component.
+		Then checks if those rockets that are an ememies are overlapping with the ship. Also, made the rockets randomly shoot from the enemies. 
+		Also increased the frequency at which the rockets are shot as the levels increased.
+	C. Ememy/Ship collision: Checks all ememy locations against ship location for an overlap/collision. 
+		If there is it should flag the game for gameover.
 
 4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up, game over text
 	A. Level advacement: Once all the enemies are defeated, increment the level 		integer	variable and update the text on the screen appropriately.
