@@ -7,6 +7,10 @@ Implementation Details:
 	D. Rocket Fire/Hit sounds: found/edited and implemented sounds for when the ship fires a rocket as well as when the rocket hits an enemy.
 
 2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
+	A. Enemy Movement: Enemies will move from one side of the screen to the other. When one enemy hits a border, all enemy speed (movement) will reverse. 
+	B. Rocket/Enemy collision: Bounding boxes are created for all enemies and user rockets. Check to see if any enemy's boxes are overlapping with any user rockets.
+	C. Enemy death/score: If a user rocket hits any enemy, delete both the enemy and the rocket. Increment the score counter.
+	D. Multiple enemies: Included multiple sprites which are enemies in different colors to be used based on which level you are on
 
 3. James Torres - Game over detection, Rocket/Ship collision, Ememy/Ship collision
 	A. Game over detection: The process of checking all enemies and enemy rockets locations against the ship location
