@@ -60,3 +60,4 @@ C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\bin\x86\Debug\Step8.pdb
 C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.exe
 C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.pdb
+C:\Users\Kiera\Source\Repos\CSE471Project3\Step8\Step8\obj\x86\Debug\Step8.csprojResolveAssemblyReference.cache

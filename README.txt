@@ -7,5 +7,5 @@ Group Members and Responsibilities:
 1. Edward Maxwell - 
 2. James Dodge - Enemy movement, Rocket/Enemy collision, enemy death/score
 3. James Torres - 
-4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up.
+4. Kiera Wheatley - Level advancement, enemy respawn, enemy speed-up, game over text
 5. Wyatt Roehler - Ship movement, rocket firing, ship texture, rocket texture.

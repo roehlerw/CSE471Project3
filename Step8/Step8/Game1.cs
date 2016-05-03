@@ -25,7 +25,7 @@ namespace Step8
         {
             graphics = new GraphicsDeviceManager(this);
             // change back to 1000!
-            graphics.PreferredBackBufferHeight = 1000;
+            graphics.PreferredBackBufferHeight = 700;
             graphics.PreferredBackBufferWidth = 600;
             Content.RootDirectory = "Content";
         }
@@ -148,7 +148,7 @@ namespace Step8
             shipWidth = ship.Bounds.Width;
 
             shipPosition.X = graphics.GraphicsDevice.Viewport.Width/2;
-            shipPosition.Y = graphics.GraphicsDevice.Viewport.Height - 3*shipHeight;
+            shipPosition.Y = graphics.GraphicsDevice.Viewport.Height - 1.2f*shipHeight;
 
             rocketHeight = rocket.Bounds.Height;
             rocketWidth = rocket.Bounds.Width;
@@ -505,7 +505,7 @@ namespace Step8
 
             if (endgame)
             {
-                spriteBatch.DrawString(endFont, "GAME OVER", new Vector2(30, 350), Color.White);
+                spriteBatch.DrawString(endFont, "GAME OVER", new Vector2(30, 250), Color.White);
             }
 
             spriteBatch.Draw(ship, shipPosition, Color.White);
