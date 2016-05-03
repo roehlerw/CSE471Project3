@@ -25,3 +25,9 @@ Implementation Details:
 	D. Game over text: One game over is detected, display the appropriate text.
 
 5. Wyatt Roehler - Ship movement, rocket firing, ship texture, rocket texture.
+	A. Ship movement: When the left or right arrow key is pressed (both wil result in no movement) the ship will move in the appropriate direction until
+		it reaches the edge of the game space.
+	B. Rocket firing: When the space bar is pressed a rocket will be fired and placed into a list until it collides with an enemy or the edge of the game area. 
+		Each rocket requires the space bar be released and then pressed again to prevent prevent spamming rockets by holding down the space bar.
+	C. Ship texture: The ship texture was created to be on an alpha map and scaled to fit in the game area.
+	D. Rocket texture: The rocket texture was created to be on an alpha map and scaled to fit in the game area.
